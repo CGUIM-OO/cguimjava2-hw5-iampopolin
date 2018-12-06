@@ -1,15 +1,16 @@
 import java.util.ArrayList;
 
 public abstract class Person {
-	private ArrayList<Card> oneRoundCard;
+	private ArrayList<Card> oneRoundCard; 
 	public void setOneRoundCard(ArrayList<Card> cards){
 		oneRoundCard=cards;
 	}
 	public ArrayList<Card> getOneRoundCard(){
-		return oneRoundCard;
+		return oneRoundCard;	
 	}
 	public abstract boolean hit_me(Table table);
-	public int getTotalValue() {
+	public int getTotalValue() 
+	{
 		int Ace_count = 0;
 		int total_value = 0;
 		for (Card c : oneRoundCard) {
@@ -24,7 +25,7 @@ public abstract class Person {
 			}
 		}
 		if (Ace_count != 0) {
-			if (total_value < 11) {
+			if (total_value < 11) 	{
 				total_value += 11;
 			} else {
 				total_value += 1;
