@@ -58,9 +58,11 @@ public class Table {
         }
 		
 		ArrayList<Card> getcard=new ArrayList<Card>();
-		getcard.add(allcards.getOneCard(true));
 		getcard.add(allcards.getOneCard(false));
+		getcard.add(allcards.getOneCard(true));
 		dealer.setOneRoundCard(getcard);
+		System.out.print("Dealer's face up card is: ");
+		getcard.get(1).printCard();
 	
 	}
 	
